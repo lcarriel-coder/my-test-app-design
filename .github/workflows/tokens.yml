@@ -1,15 +1,17 @@
 name: Generate Design Tokens
-on: [push] # Triggered every time Figma makes a "Push"
+on: [push]
 
 jobs:
   build-tokens:
     runs-on: ubuntu-latest
+    permissions: # Added this to reinforce the permission
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/checkout@v4
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -21,8 +23,8 @@ jobs:
 
       - name: Commit and Push CSS
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add build/css/variables.css
-          git commit -m "Update CSS variables from Figma" || exit 0
+          git commit -m "Update CSS variables from Figma" || echo "No changes to commit"
           git push
