@@ -1,0 +1,28 @@
+name: Generate Design Tokens
+on: [push] # Triggered every time Figma makes a "Push"
+
+jobs:
+  build-tokens:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/checkout@v4
+        with:
+          node-version: '20'
+
+      - name: Install Style Dictionary
+        run: npm install style-dictionary
+
+      - name: Build Tokens
+        run: npx style-dictionary build
+
+      - name: Commit and Push CSS
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add build/css/variables.css
+          git commit -m "Update CSS variables from Figma" || exit 0
+          git push
