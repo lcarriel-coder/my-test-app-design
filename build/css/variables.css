@@ -3,9 +3,9 @@
  */
 
 :root {
-  --core-tokens-mode-1-brand-primary: #45db00;
+  --core-tokens-mode-1-brand-primary: #3e45c4;
   --core-tokens-mode-1-spacing-md: 16px;
-  --core-tokens-mode-1-error-color: #ff0001;
+  --core-tokens-mode-1-error-color: #ff0002;
   --core-tokens-mode-1-spacing-2: 21;
   --core-tokens-mode-1-spacing-md-v2: 18;
 }
