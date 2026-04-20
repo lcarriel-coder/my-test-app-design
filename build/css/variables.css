@@ -4,8 +4,15 @@
 
 :root {
   --core-tokens-mode-1-brand-primary: #4175f9;
-  --core-tokens-mode-1-spacing-md: 16px;
+  --core-tokens-mode-1-spacing-md: 16;
   --core-tokens-mode-1-error-color: #ff0002;
   --core-tokens-mode-1-spacing-2: 21;
   --core-tokens-mode-1-spacing-md-v2: 18;
+  --core-tokens-mode-1-brand-error: #ff0002;
+  --core-tokens-mode-1-surface-main: #ffffff;
+  --core-tokens-mode-1-text-primary: #1a1a1a;
+  --core-tokens-mode-1-text-secondary: #666666;
+  --core-tokens-mode-1-spacing-xs: #888888;
+  --core-tokens-mode-1-number: 8;
+  --core-tokens-mode-1-radius-m: 12;
 }
