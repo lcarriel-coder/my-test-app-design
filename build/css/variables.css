@@ -15,4 +15,11 @@
   --ds24-tokens-spacing-xs: #888888;
   --ds24-tokens-number: 8;
   --ds24-tokens-radius-m: 12;
+  --core-tokens-mode-1-color-primary: #3d45ee;
+  --core-tokens-mode-1-color-danger: #ff0002;
+  --core-tokens-mode-1-surface-main: #ffffff;
+  --core-tokens-mode-1-text-primary: #1a1a1a;
+  --core-tokens-mode-1-text-secondary: #666666;
+  --core-tokens-mode-1-spacing-md: 16;
+  --core-tokens-mode-1-radius-m: 12;
 }
