@@ -3,16 +3,16 @@
  */
 
 :root {
-  --core-tokens-mode-1-brand-primary: #60e082;
-  --core-tokens-mode-1-spacing-md: 16;
-  --core-tokens-mode-1-error-color: #ff0002;
-  --core-tokens-mode-1-spacing-2: 21;
-  --core-tokens-mode-1-spacing-md-v2: 18;
-  --core-tokens-mode-1-brand-error: #ff0002;
-  --core-tokens-mode-1-surface-main: #ffffff;
-  --core-tokens-mode-1-text-primary: #1a1a1a;
-  --core-tokens-mode-1-text-secondary: #666666;
-  --core-tokens-mode-1-spacing-xs: #888888;
-  --core-tokens-mode-1-number: 8;
-  --core-tokens-mode-1-radius-m: 12;
+  --ds24-tokens-brand-primary: #60e082;
+  --ds24-tokens-spacing-md: 16;
+  --ds24-tokens-error-color: #ff0002;
+  --ds24-tokens-spacing-2: 21;
+  --ds24-tokens-spacing-md-v2: 18;
+  --ds24-tokens-brand-error: #ff0002;
+  --ds24-tokens-surface-main: #ffffff;
+  --ds24-tokens-text-primary: #1a1a1a;
+  --ds24-tokens-text-secondary: #666666;
+  --ds24-tokens-spacing-xs: #888888;
+  --ds24-tokens-number: 8;
+  --ds24-tokens-radius-m: 12;
 }
