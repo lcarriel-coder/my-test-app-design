@@ -21,10 +21,43 @@ jobs:
       - name: Build Tokens
         run: npx style-dictionary build
 
+      - name: Create versioned CSS + latest alias
+        run: |
+          set -euo pipefail
+
+          SOURCE_FILE="build/css/variables.css"
+          HASH="$(sha256sum "$SOURCE_FILE" | cut -c1-10)"
+          VERSIONED_FILE="build/css/variables.${HASH}.css"
+          LATEST_FILE="build/css/latest.css"
+
+          # Keep one immutable, content-addressed file per release.
+          cp "$SOURCE_FILE" "$VERSIONED_FILE"
+          # Stable URL for consumers.
+          cp "$SOURCE_FILE" "$LATEST_FILE"
+
+          # Optional cleanup: keep only the current hashed artifact.
+          shopt -s nullglob
+          for file in build/css/variables.*.css; do
+            if [[ "$file" != "$VERSIONED_FILE" ]]; then
+              rm -f "$file"
+            fi
+          done
+          shopt -u nullglob
+
+      - name: Create cache headers for Cloudflare Pages
+        run: |
+          cat <<'EOF' > build/css/_headers
+          /latest.css
+            Cache-Control: public, max-age=60, s-maxage=300, stale-while-revalidate=86400
+
+          /variables.*.css
+            Cache-Control: public, max-age=31536000, immutable
+          EOF
+
       - name: Commit and Push CSS
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add build/css/variables.css
+          git add build/css/*.css build/css/_headers
           git commit -m "Update CSS variables from Figma" || echo "No changes to commit"
           git push
