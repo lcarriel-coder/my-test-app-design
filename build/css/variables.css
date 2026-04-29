@@ -3,11 +3,35 @@
  */
 
 :root {
-  --ds24-tokens-color-primary: #a984fe;
-  --ds24-tokens-color-danger: #ff0002;
-  --ds24-tokens-surface-main: #ffffff;
-  --ds24-tokens-text-primary: #1a1a1a;
-  --ds24-tokens-text-secondary: #666666;
-  --ds24-tokens-spacing-md: 16;
-  --ds24-tokens-radius-m: 12;
+  --ds24-global-primary-colors-neutral-n500: #262626;
+  --ds24-global-primary-colors-neutral-n400: #505050;
+  --ds24-global-primary-colors-neutral-n300: #767676;
+  --ds24-global-primary-colors-neutral-n200: #d2d2d2;
+  --ds24-global-primary-colors-neutral-n100: #fafafa;
+  --ds24-global-primary-colors-neutral-n50: #ffffff;
+  --ds24-global-primary-colors-neutral-n0: #ffffff;
+  --ds24-global-primary-colors-primary-p500: #1040a8;
+  --ds24-global-primary-colors-primary-p400: #134ecd;
+  --ds24-global-primary-colors-primary-p300: #2463eb;
+  --ds24-global-primary-colors-primary-p200: #6a95f1;
+  --ds24-global-primary-colors-primary-p100: #dae4fc;
+  --ds24-global-primary-colors-primary-p50: #ecf2fd;
+  --ds24-global-primary-colors-error-e500: #882307;
+  --ds24-global-primary-colors-error-e400: #b72f0a;
+  --ds24-global-primary-colors-error-e300: #d5370b;
+  --ds24-global-primary-colors-error-e200: #f9a38b;
+  --ds24-global-primary-colors-error-e100: #fcd1c5;
+  --ds24-global-primary-colors-error-e50: #fde0d8;
+  --ds24-global-primary-colors-success-s500: #00592b;
+  --ds24-global-primary-colors-success-s400: #006c34;
+  --ds24-global-primary-colors-success-s300: #008842;
+  --ds24-global-primary-colors-success-s200: #45d68b;
+  --ds24-global-primary-colors-success-s100: #bcf0d5;
+  --ds24-global-primary-colors-success-s50: #def8ea;
+  --ds24-global-primary-colors-warning-w500: #7a4900;
+  --ds24-global-primary-colors-warning-w400: #99610f;
+  --ds24-global-primary-colors-warning-w300: #fbaf00;
+  --ds24-global-primary-colors-warning-w200: #ffd333;
+  --ds24-global-primary-colors-warning-w100: #ffe999;
+  --ds24-global-primary-colors-warning-w50: #fff2c2;
 }
